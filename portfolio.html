@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="http://kit.fontawesome.com/c4254e24a8.js"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+ <style>
+    /* styles.css */
+
+/* Reset */
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns for larger screens */
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns for smaller screens */
+  }
+}
+</style>
+
+ 
+</head>
+<body>
+    <header>
+        <img src="images/arumugan construction logo..png" alt="Company Logo" class="logo">
+        <a href="#" class="brand">ARUMUGAN<br><span>CONSTRUCTION</span></a>
+        <div class="menu-btn">
+            <img src="images/menu.png" alt="" height="0px" width="0px">
+            
+          </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html" >About Us</a>
+                <a href="service.html">Services</a>
+                <a href="Portfolio.html" class="active">Portfolio</a>
+                <a href="videos.html">videos</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="images/5.mp4" autoplay muted loop></video>
+        
+        <div class="content active">
+            <h1>Years of <br><span>Expertise</span></h1>
+            <p>With over a decade of experience, we specialize in residential, commercial, and industrial construction projects.</p>
+            <a href="contact.html">Read more</a>
+        </div>
+        
+    </section>
+<br><br><br><br><br>
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 1" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 2" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 3" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 4" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 5" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 6" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 4" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 5" class="gallery-image">
+  </div>
+  <div class="gallery-item">
+    <img src="images/service.jpg" alt="Image 6" class="gallery-image">
+  </div>
+</div>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-image" src="" alt="">
+  </div>
+  <footer>
+    <div class="row">
+        <div class="col"><img src="images/arumugan construction logo..png"  class="logo" ><p>At Arumugan, we specialize in high-quality residential, commercial, and renovation projects. Our team combines expertise, innovation, and sustainability to bring your vision to life. Build with us for reliability, precision, and enduring craftsmanship.</p></div>
+        <div class="col">
+            <h3>OFFICE <div class="underline"><span></span> </div></h3>
+            <p>ITPL road,</p>
+            <p>Whitefield,chennai</p>
+            <p>Tamil nadu, Pin 6012205, India</p><br>
+            <p class="email-id">abcd1234@gmail.com</p>
+            <br>
+            <h4>+91 8846896481</h4>
+        </div>
+        <div class="col">
+            <h3>LINKS <div class="underline"><span></span> </div></h3>
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li> 
+              <li> <a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+               <li><a href="Portfolio.html">Portfolio</a></li>
+               <li><a href="videos.html">videos</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>NEWS LETTER <div class="underline"><span></span> </div></h3>
+            <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit" ><i class="fas fa-arrow-right" style="margin-left: 300px;margin-top: -90px;position: absolute;"></i></button>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a> 
+            </div>
+        </div>  
+    </div>
+    <hr>
+    <center>
+        <p style="font-size: 20px;color: rgb(245, 171, 12);font-weight: 900;">"எங்கள் தரத்தின் பயணம் உங்கள் கனவு இல்லத்தின் இலக்கு "</p>
+    </center><br><br>
+        <p class="copyrights">Arumugan©2024 - All right Reserved</p>
+</footer>
+  <script>
+    // script.js
+
+// Select elements
+const galleryImages = document.querySelectorAll('.gallery-image');
+const lightbox = document.querySelector('.lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const closeButton = document.querySelector('.close');
+
+// Open lightbox
+galleryImages.forEach(image => {
+  image.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImage.src = image.src;
+  });
+});
+
+// Close lightbox
+closeButton.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+// Close lightbox on clicking outside the image
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImage) {
+    lightbox.style.display = 'none';
+  }
+});
+
+
+
+  </script>
+  <script src="script/scripts.js"></script>
+</body>
+</html>
